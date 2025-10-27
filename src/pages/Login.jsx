@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import API from "../api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -72,12 +74,12 @@ const Login = () => {
                 </form>
 
                 <div className="flex justify-between mt-6 text-sm">
-                    <a href="/forgot-password" className="text-blue-600 hover:underline">
+                    <Link to="/forgot-password" className="text-blue-600 hover:underline">
                         Forgot Password?
-                    </a>
-                    <a href="/signup" className="text-blue-600 hover:underline">
+                    </Link>
+                    <Link to="/signup" className="text-blue-600 hover:underline">
                         Create Account
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

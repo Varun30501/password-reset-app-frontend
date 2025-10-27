@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import API from "../api";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const Signup = () => {
     const [username, setUsername] = useState("");
@@ -12,7 +14,7 @@ const Signup = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await API.post("/register", { username, email, password });
+            await API.post("/signup", { username, email, password });
             toast.success("Account created successfully!");
             navigate("/login");
         } catch (err) {
@@ -77,9 +79,9 @@ const Signup = () => {
                 </form>
 
                 <div className="text-center mt-6 text-sm">
-                    <a href="/login" className="text-blue-600 hover:underline">
+                    <Link to="/login" className="text-blue-600 hover:underline">
                         Already have an account? Login
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

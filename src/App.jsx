@@ -10,6 +10,8 @@ import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/protectedRoute";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
+import UserDashboard from "./pages/UserDashboard";
+
 
 function AppContent() {
   const location = useLocation();
@@ -27,8 +29,8 @@ function AppContent() {
       {/* ✅ Non-admin pages are full viewport height, centered */}
       <main
         className={`flex-1 ${isAdminPage
-            ? "pt-20 pb-10 px-4 flex justify-center items-start"
-            : "flex justify-center items-center"
+          ? "pt-20 pb-10 px-4 flex justify-center items-start"
+          : "flex justify-center items-center"
           }`}
       >
         <div className="w-full max-w-6xl">
@@ -46,6 +48,16 @@ function AppContent() {
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute allowedRoles={["user", "admin"]}>
+                  <UserDashboard />
+                </ProtectedRoute>
+              }
+            />
+
+
           </Routes>
         </div>
       </main>

@@ -29,7 +29,7 @@ const Navbar = () => {
                                 Login
                             </Link>
                             <Link to="/signup" className="text-white hover:text-gray-200">
-                                Register
+                                SignUp
                             </Link>
                         </>
                     ) : (
@@ -38,7 +38,13 @@ const Navbar = () => {
                                 <Link to="/admin" className="text-white hover:text-gray-200">
                                     Admin
                                 </Link>
+                            )},
+                            {user.role !== "admin" && (
+                                <Link to="/dashboard" className="text-white hover:text-gray-200">
+                                    Dashboard
+                                </Link>
                             )}
+
                             <button
                                 onClick={handleLogout}
                                 className="bg-white text-blue-600 px-3 py-1.5 rounded-lg font-medium hover:bg-gray-200 transition"

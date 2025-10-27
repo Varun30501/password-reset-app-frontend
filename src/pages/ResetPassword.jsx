@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import API from "../api";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+
 
 const ResetPassword = () => {
     const { token } = useParams();
@@ -54,9 +56,9 @@ const ResetPassword = () => {
                 </form>
 
                 <div className="text-center mt-6">
-                    <a href="/login" className="text-blue-600 text-sm hover:underline">
+                    <Link to="/login" className="text-blue-600 text-sm hover:underline">
                         Back to Login
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
