@@ -11,6 +11,15 @@ It connects with the backend (Node + Express) to provide a seamless user experie
 
 ---
 
+### MAILBOX to be used to check the mails being sent - testmail30501@getairmail.com
+## To access the inbox
+## Step 1: Go to inboxes.com
+## Step 2: Click on get new inbox
+## Step 3: Then enter testmail30501 as username and select the getairmail.com for mailbox domain.
+## Step 4: After doing till step 3 you will see the inbox which is used for this Password Reset testing and can send reset mails for your accounts which you have registered through the app.
+
+### IMPORTANT - Please wait a while since the server might be inactive it will take some time to load up and then only the action will be taken. It will take a maximum of 30 seconds and once the email is sent you will receive it in the mailbox and a pop-up which tells that mail has been sent successfully.
+
 ## ⚙️ Tech Stack
 
 - **React.js** — Frontend library  
